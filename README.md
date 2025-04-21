@@ -1,14 +1,14 @@
-# 🌡️ Smart CO2 Sensor with Wireless Communication
+# Smart CO2 Sensor with Wireless Communication 🌡️
 
 ![Prototype](img/prototipo.jpg)
 
-## 📋 Overview
+## Overview 📋
 
 This project implements a smart CO2 sensor system with wireless communication capabilities designed for indoor environments. The system continuously monitors CO2 concentration, temperature, and humidity levels, transmitting the data wirelessly to a central server where it can be visualized through a user-friendly dashboard. The solution also includes an automated alert system that notifies users via email or Telegram when CO2 levels exceed predefined thresholds (1500 ppm).
 
 The project consists of a custom-designed PCB integrating an ESP-12E module with MHZ-19B CO2 sensor and BME280 temperature/humidity sensor, communicating with a Raspberry Pi that serves as the central hub for data processing and visualization.
 
-## 🎯 Project Goals
+## Project Goals 🎯
 
 - ✅ Design a device capable of measuring CO2 concentrations in indoor spaces using the MHZ-19B sensor
 - ✅ Implement wireless data transmission using MQTT protocol for real-time monitoring
@@ -17,7 +17,7 @@ The project consists of a custom-designed PCB integrating an ESP-12E module with
 - ✅ Set up an automated alert system for when CO2 levels exceed recommended thresholds
 - ✅ Design and manufacture a compact prototype integrating all components
 
-## 🛠️ Technologies Used
+## Technologies Used 🛠️ 
 
 ### Hardware
 - **ESP-12E Module**: Main microcontroller
@@ -37,7 +37,7 @@ The project consists of a custom-designed PCB integrating an ESP-12E module with
 - **Node-RED**: Flow-based development tool for visualization and alerts
 - **Mosquitto**: MQTT broker implementation
 
-## 📊 Features
+## Features 📊 
 
 - Real-time monitoring of CO2, temperature, and humidity
 - Remote sensor activation/deactivation
@@ -46,12 +46,12 @@ The project consists of a custom-designed PCB integrating an ESP-12E module with
 - Responsive visualization dashboard
 - Expandable system architecture
 
-## 📡 System Architecture
+## System Architecture 📡
 
 ```
 ┌──────────────────┐         ┌─────────────────┐         ┌─────────────────┐
 │  Sensor Module   │  WiFi   │  Raspberry Pi   │  HTTP   │    End User     │
-│  (ESP-12E)       │◄──────► │  (MQTT Broker   │◄──────►│    Interface      │
+│  (ESP-12E)       │◄──────► │  (MQTT Broker   │◄──────► │    Interface    │
 │  CO2, Temp, Hum  │  MQTT   │   & Node-RED)   │  Email  │  (Web Browser)  │
-└──────────────────┘         └─────────────────┘  Telegram└─────────────────┘
+└──────────────────┘         └─────────────────┘ Telegram└─────────────────┘
 ```
